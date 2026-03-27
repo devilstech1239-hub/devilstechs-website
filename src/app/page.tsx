@@ -184,7 +184,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-4 relative z-10">{service.title}</h3>
                 <p className="text-text-gray mb-8 leading-relaxed relative z-10">{service.desc}</p>
-                <Link href={`/services/${service.title.toLowerCase().replace(/ /g, '-')}`} className="text-primary font-bold text-sm uppercase flex items-center gap-2 group-hover:gap-4 transition-all duration-300 relative z-10">
+                <Link href="/services" className="text-primary font-bold text-sm uppercase flex items-center gap-2 group-hover:gap-4 transition-all duration-300 relative z-10">
                   Read More <ArrowRight size={16} />
                 </Link>
               </motion.div>

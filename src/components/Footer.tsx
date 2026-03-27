@@ -37,13 +37,11 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-bold uppercase tracking-widest text-sm mb-6 h-[40px] md:h-[50px] flex items-center">Quick Links</h4>
           <ul className="space-y-4">
-            {["Home", "About Us", "Services", "Portfolio", "Contact"].map((link) => (
-              <li key={link}>
-                <Link href="#" className="text-text-gray hover:text-primary transition-colors text-sm font-medium">
-                  {link}
-                </Link>
-              </li>
-            ))}
+            <li><Link href="/" className="text-text-gray hover:text-primary transition-colors text-sm font-medium">Home</Link></li>
+            <li><Link href="/about" className="text-text-gray hover:text-primary transition-colors text-sm font-medium">About Us</Link></li>
+            <li><Link href="/services" className="text-text-gray hover:text-primary transition-colors text-sm font-medium">Services</Link></li>
+            <li><Link href="/portfolio" className="text-text-gray hover:text-primary transition-colors text-sm font-medium">Portfolio</Link></li>
+            <li><Link href="/pricing" className="text-text-gray hover:text-primary transition-colors text-sm font-medium">Pricing</Link></li>
           </ul>
         </div>
 
@@ -53,7 +51,7 @@ export default function Footer() {
           <ul className="space-y-4">
             {["SEO Optimization", "Performance Marketing", "Web Development", "Social Media", "Authority Backlinks"].map((link) => (
               <li key={link}>
-                <Link href="#" className="text-text-gray hover:text-primary transition-colors text-sm font-medium">
+                <Link href="/services" className="text-text-gray hover:text-primary transition-colors text-sm font-medium">
                   {link}
                 </Link>
               </li>
