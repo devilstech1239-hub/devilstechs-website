@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowLeft, Clock, Calendar, Share2, Globe, MessageCircle, AtSign } from "lucide-react";
 import { useParams } from "next/navigation";
+import DynamicSchema from "@/components/DynamicSchema";
 
 const blogDatabase: Record<string, any> = {
   "1": {
@@ -39,6 +40,7 @@ export default function BlogDetail() {
 
   return (
     <div className="bg-dark min-h-screen pb-32">
+      <DynamicSchema type="Article" data={post} url={`/blog/${id}`} />
       {/* Hero */}
       <section className="relative pt-40 pb-24 bg-[#0a0a0a] border-b border-white/5">
         <div className="max-w-[800px] mx-auto px-6 text-center">

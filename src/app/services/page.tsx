@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Search, BarChart, Code, Globe, MessageSquare, CheckCircle, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const servicesDetails = [
   {
@@ -79,11 +80,12 @@ export default function Services() {
             >
               {/* Image / Graphic Placeholder */}
               <div className="w-full lg:w-1/2 aspect-square md:aspect-video lg:aspect-square bg-[#151515] border border-white/5 relative flex items-center justify-center p-10 group overflow-hidden">
+                <Image src="/services-preview.png" alt={`${service.title} illustration`} fill className="object-cover opacity-30 group-hover:opacity-60 transition-opacity duration-700" sizes="(max-width: 768px) 100vw, 50vw" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                <div className="text-primary transform scale-150 group-hover:scale-110 opacity-20 group-hover:opacity-100 transition-all duration-700">
+                <div className="text-primary transform scale-150 group-hover:scale-110 opacity-50 group-hover:opacity-100 transition-all duration-700 relative z-10">
                   {service.icon}
                 </div>
-                <h3 className="absolute bottom-10 left-10 text-4xl lg:text-5xl font-black text-white/5 uppercase tracking-tighter">
+                <h3 className="absolute bottom-10 left-10 text-4xl lg:text-5xl font-black text-white/10 uppercase tracking-tighter z-10">
                   {String(idx + 1).padStart(2, '0')}
                 </h3>
               </div>

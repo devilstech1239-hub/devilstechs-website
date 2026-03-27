@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink, CheckCircle } from "lucide-react";
 import { useParams } from "next/navigation";
+import DynamicSchema from "@/components/DynamicSchema";
 
 const portfolioDatabase: Record<string, any> = {
   "1": { 
@@ -88,6 +89,7 @@ export default function PortfolioDetail() {
 
   return (
     <div className="bg-dark min-h-screen pb-32">
+      <DynamicSchema type="Portfolio" data={project} url={`/portfolio/${id}`} />
       {/* Hero Section */}
       <section className="relative pt-40 pb-20 bg-[#0a0a0a] border-b border-white/5">
         <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

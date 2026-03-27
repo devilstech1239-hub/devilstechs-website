@@ -66,7 +66,10 @@ export default function Home() {
       
       {/* 1. Hero Section - Elevated Aesthetics */}
       <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden bg-[#050505]">
-        <div className="absolute inset-0 z-0 opacity-40">
+        <div className="absolute inset-0 z-0">
+          <Image src="/hero-abstract.png" alt="DevilsTechs Premium Agency Architecture" fill priority className="object-cover opacity-20" sizes="100vw" />
+        </div>
+        <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
            <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px] mix-blend-screen animate-pulse"></div>
            <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-blue-900/40 rounded-full blur-[150px] mix-blend-screen"></div>
         </div>
@@ -85,7 +88,7 @@ export default function Home() {
           <motion.h1 
             variants={fadeInUp}
             transition={{ duration: 0.8 }}
-            className="text-6xl md:text-[6rem] font-black text-white tracking-tighter mb-8 leading-[1.05]"
+            className="text-5xl sm:text-6xl md:text-[6rem] font-black text-white tracking-tighter mb-8 leading-[1.05]"
           >
             We Provoke Change.<br className="hidden md:block"/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-primary to-teal-900 drop-shadow-2xl">
@@ -120,7 +123,6 @@ export default function Home() {
           transition={{ delay: 1.5, duration: 1 }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         >
-           <span className="text-gray-500 uppercase tracking-widest text-[10px] font-bold">Scroll Down</span>
            <div className="w-[1px] h-[60px] bg-gradient-to-b from-primary to-transparent"></div>
         </motion.div>
       </section>
@@ -192,7 +194,7 @@ export default function Home() {
       </section>
 
       {/* 3. About Us Tabs Section */}
-      <section className="py-32 bg-[#151515]">
+      <section className="py-32 bg-[#151515] relative overflow-hidden">
         <div className="max-w-[1200px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -318,7 +320,7 @@ export default function Home() {
       </section>
 
       {/* 6. FAQ Section (Homepage Addition) */}
-      <section className="py-32 bg-[#151515]">
+      <section className="py-32 bg-[#151515] relative overflow-hidden">
         <div className="max-w-[1000px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
